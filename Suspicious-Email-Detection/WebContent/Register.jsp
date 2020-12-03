@@ -52,7 +52,7 @@
 						<span class="label-input100">Email</span>
 						<input class="input100" type="text" name="email" placeholder="Email addess...">
 						<span class="focus-input100"></span>
-					</div>
+					</div> 
 
 					<div class="wrap-input100 validate-input" data-validate="Username is required">
 						<span class="label-input100">Username</span>
