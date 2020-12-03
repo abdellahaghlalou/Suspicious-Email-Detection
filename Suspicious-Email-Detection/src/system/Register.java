@@ -15,10 +15,12 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Register")
 public class Register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+	public static final String VUE = "/Suspicious-Email-Detection/Register.jsp"; 
+	public static final String CHAMP_EMAIL = "email";
+    public static final String CHAMP_PASS = "motdepasse";
+    public static final String CHAMP_CONF = "confirmation";
+    public static final String CHAMP_NOM = "nom";
+
     public Register() {
         super();
        
@@ -27,25 +29,17 @@ public class Register extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		response.setContentType("text/html");
-		response.setCharacterEncoding( "UTF-8" );
-		PrintWriter out = response.getWriter();
-		out.println("<!DOCTYPE html>");
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<meta charset=\"utf-8\" />");
-		out.println("<title>Test</title>");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("<p>Ceci est une page générée depuis une servlet. haahhaah</p>");
-		out.println("</body>");
-		out.println("</html>");
+		
 	}
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		    String email = request.getParameter( CHAMP_EMAIL );
+	        String motDePasse = request.getParameter( CHAMP_PASS );
+	        String confirmation = request.getParameter( CHAMP_CONF );
+	        String nom = request.getParameter( CHAMP_NOM );
+	        
+		
 	}
 
 }
